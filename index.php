@@ -54,7 +54,7 @@
                     Please enter a poem less than 2000 characters to submit.
                 </div>
                 <div style="color:red" ng-show="addPoem.author.$dirty && addPoem.author.$invalid" id="noauthor">
-                    Please enter an author name less than 50 characters.
+                    Please enter an author name less than 50 characters. ("Anonymous" is fine.)
                 </div>
 
 			</form>
