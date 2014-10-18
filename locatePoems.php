@@ -1,14 +1,15 @@
 <?php
-/** Jin-li Chang
- *
+/**
+ * Created by PhpStorm.
+ * User: JChang
+ * Date: 10/18/2014
+ * Time: 2:36 AM
  */
 
 if(isset($_GET["lat"]) & isset($_GET["lon"])){
     $LAT = $_GET["lat"];
 
     $LON = $_GET["lon"];
-
-    $dist = isset($_GET["dist"]) ? intval($_GET["dist"]) : 10;
 
     $db = new PDO("mysql:dbname=cederw_findrhyme;host=localhost","cederw_luke","nooba");
 
@@ -20,7 +21,7 @@ if(isset($_GET["lat"]) & isset($_GET["lon"])){
 
 					    POW(69.1 * ($LON - LON) * COS(LAT / 57.3), 2)) * 1609 AS distance
 
-					FROM main HAVING distance < $dist ORDER BY distance;";
+					FROM main HAVING distance < 500 ORDER BY distance;";
 
     $statement=$db->prepare($query);
     $statement->execute();

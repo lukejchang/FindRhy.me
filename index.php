@@ -36,16 +36,60 @@
         </div>
 
        
+		
+		<div class="search">
+			<p>Welcome to FindRhyme,</p> 
+			<p>a place where you can discover and share creations with people who have visited locations near you.</p>
+			<div class="twobut">
+				
+				<form action="output.php" method="post">
+					<input class ="submit" type="submit" id="outputSubmit" value="Find Rhymes"/>
+				</form>
+							<!-- Button trigger modal -->
+				<button id="openModal" data-toggle="modal" data-target="#myModal">
+				  Submit a poem
+				</button>
 
-		<div class="search"><p>Welcome. We are Find Rhyme. Every location you are located contains different poetry from peers from the past. Feel free to add your own to your location or to view poems that are already written specifically for your location.</p> 
-			<form action="output.php" method="post">
-				<form ng-submit="getPoms()">
-				<input class ="submit" type="submit" id="outputSubmit" value="Find Rhymes Now"/>
-			</form>
+				
+			</div>
 			
 		</div>
 		 <div id="map-canvas"></div>
 		<div class="addPoem">
+		
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" id="closeModal" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Use this form to submit your work</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form name="addPoem" novalidate ng-submit="sendPoem(addPoem)">
+                        <div ng-show="success">Thanks! Poem submitted at coordinates ({{lat}}, {{long}}). Submit another poem or feel free to close this form.</div>
+						<textarea class="poem" ng-model="submission" rows="10" id="submission" name="submission" cols="50" placeholder="Enter your poems here to submit to this location! (2000 characters max)" ng-maxlength=2000 required></textarea><br>
+						<input class="author" ng-model="author" placeholder="Your name (50 characters max)" type="text" id="author" name="author" ng-maxlength=50 required/><br>
+						<input type="submit" name="btn" id="poemSubmit" ng-disabled="addPoem.$invalid">
+		                <div style="color:red" ng-show="addPoem.submission.$dirty && addPoem.submission.$invalid" id="nopoem">
+		                    Please enter a poem less than 2000 characters to submit.
+		                </div>
+		                <div style="color:red" ng-show="addPoem.author.$dirty && addPoem.author.$invalid" id="noauthor">
+		                    Please enter an author name less than 50 characters. ("Anonymous" is fine.)
+		                </div>
+
+					</form> 
+			      </div>
+			      <div class="modal-footer">
+			    <!--    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Save changes</button> -->
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+<!--
 			<form name="addPoem" novalidate ng-submit="sendPoem()">
 				<textarea class="poem" ng-model="submission" rows="10" id="submission" name="submission" cols="50" placeholder="Enter your poems here to submit to this location!" ng-maxlength=2000 required></textarea><br>
 				<input class="author" ng-model="author" placeholder="Your name" type="text" id="author" name="author" ng-maxlength=50 required/><br>
@@ -57,7 +101,7 @@
                     Please enter an author name less than 50 characters. ("Anonymous" is fine.)
                 </div>
 
-			</form>
+			</form> -->
 
 		</div>
 	</body>

@@ -1,4 +1,7 @@
+//var infowindow = null;
+
 function initialize() {
+
     if (navigator.geolocation) {
 
         navigator.geolocation.getCurrentPosition(setOpts);
@@ -7,7 +10,29 @@ function initialize() {
     }
 }
 
+function mapPoems(position, map){
+    var infowindow = new google.maps.InfoWindow();
+    $.get('result.php?lat=' + position.coords.latitude + "&lon=" + position.coords.longitude + "&dist=500", function(data){
+        var poems = angular.fromJson(data);
+        for(var i = 0; i<poems.length; i++){
+            var author = "Poem by " + poems[i].name;
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(poems[i].lat, poems[i].lon),
+                map: map,
+                title:author
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker,author,infowindow){
+                return function() {
+                    infowindow.setContent(author);
+                    infowindow.open(map,marker);
+                };
+            })(marker,author,infowindow));
+        }
+    })
+}
+
 function setOpts(position){
+    //from detectmobilebrowsers.com
     window.mobilecheck = function () {
         var check = false;
         (function (a, b) {
@@ -18,7 +43,7 @@ function setOpts(position){
     var mobile = window.mobilecheck();
 
   var mapOptions = {
-    zoom: 14,
+    zoom: 17,
     center: new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
       //on mobile: should not be able to drag
       //on desktop: should not be able to scroll (so user can scroll down the page)
@@ -29,6 +54,7 @@ function setOpts(position){
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+    mapPoems(position, map);
 }
 
 function loadScript() {
