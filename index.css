@@ -1,22 +1,30 @@
 /* Stylesheet made by Jenny Chen */ 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
 body {
 	background-color: white;
-<<<<<<< HEAD
-}
-=======
 	margin: 0px;
 	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+		color:#888;
+
+
+}
+p {
+	text-align: center;
+	font-size: 130%;
+	font-weight: 300;
 }
 
 .header {
 	background-image: url('img/background.jpg');
 	background-size: 100%;
-	padding: 4em 0em 2em 0em;
+	background-repeat: no-repeat;
+	padding: 2em 0em 2em 0em;
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	position: relative;
-	width: 100%;
+
 	text-align: center;
 
 
@@ -26,22 +34,56 @@ body {
 h1 {
 	color:#FFF;
 	font-weight: 100;
+	font-size: 200%;
 	
 }
 
+h2 {
+	color:#FFF;
+	font-weight: 100;
+	 font-size: 70%;
+	 letter-spacing: 10px;
+}
+
 .search {
-	padding: 4em 0em 2em 0em;
+	padding: 2em 4em 2em 4em;
 	text-align: center;
 
 }
 
 .addPoem {
 	padding: 4em 0em 2em 0em;
-	background-color: #9f8186;
+	background-image: url('img/header.jpg');
 	text-align: center;
 }
 
 .background {
 
 }
->>>>>>> FETCH_HEAD
+
+.logo {
+	width: 15%;
+}
+
+textarea {
+  background-color: #000 center center no-repeat; /* This ruins default border */
+  border: 1px solid #888; 
+}
+
+input{
+		
+	background: none;
+	border-radius: none;
+	border: 2px solid;
+	border-color: #9f8186;
+	color: #9f8186;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.90em 1.2em;
+	letter-spacing: 1px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.4em;
+		
+	}
