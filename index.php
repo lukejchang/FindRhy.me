@@ -10,5 +10,14 @@
 	<body>
 		<h1>FindRhy.me</h1>
 		<div id="map"></div>
+		<form action="output.php" method="post">
+			Find Rhymes! <input type="submit" />
+		</form>
+		<form action="input.php" method="post">
+			<input type="text" />
+			<input type="submit" />
+		</form>
+
+		
 	</body>
 </html>
