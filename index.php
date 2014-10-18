@@ -14,7 +14,7 @@
 			Find Rhymes! <input type="submit" />
 		</form>
 		<form action="input.php" method="post">
-			<input type="text" />
+			<textarea rows="10" cols="50" placeholder="Enter your poems here to submit to this location!"></textarea>
 			<input type="submit" />
 		</form>
 
