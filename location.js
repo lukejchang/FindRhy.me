@@ -20,22 +20,6 @@ app.controller('indexCtrl', ['$scope', function($scope){
     };
 
     function send(position){
-        //var send = true;
-/*        $scope.nopoem = false;
-        $scope.
-        var poem = $('#submission').val();
-        if(poem == ''){
-            $('#nopoem').show();
-            send = false;
-        }
-        $('#submission').val('');
-        var author = $('#author').val();
-        if(author == ''){
-            $('#noauthor').show();
-            send = false;
-        }
-        $('#author').val('');*/
-
         $.post('input.php', {"lat":position.coords.latitude, "long":position.coords.longitude, "submission": $scope.submission, "author": $scope.author}, function(data){
             console.log(data);
         });
@@ -45,7 +29,7 @@ app.controller('indexCtrl', ['$scope', function($scope){
         $.post('output.php', {"lat":position.coords.latitude, "long":position.coords.longitude}, function(data){
             console.log(data);
         });
-
-        //  window.location.replace("input.php?lat="+position.coords.latitude+"&lon="+position.coords.longitude);
     }
+
+
 }]);

@@ -10,6 +10,7 @@
 		<title>FindRhy.me</title>
 		<link href="index.css" type="text/css" rel="stylesheet" />
 		<link rel="icon" href="" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 		<script src="location.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 		<script src="output.js"></script>

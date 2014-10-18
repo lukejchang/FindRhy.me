@@ -6,7 +6,7 @@ body {
 	margin: 0px;
 	font-size: 100%;
 	font-family: 'Lato', sans-serif;
-		color:#888;
+	color:#888;
 
 
 }
@@ -46,14 +46,14 @@ h2 {
 }
 
 .search {
-	padding: 2em 4em 2em 4em;
+	padding: 4em 4em 4em 4em;
 	text-align: center;
 
 }
 
 .addPoem {
-	padding: 4em 0em 2em 0em;
-	background-image: url('img/header.jpg');
+	padding: 2em 0em 2em 0em;
+	background-image: url('img/header-01.jpg');
 	text-align: center;
 }
 
@@ -65,12 +65,9 @@ h2 {
 	width: 15%;
 }
 
-textarea {
-  background-color: #000 center center no-repeat; /* This ruins default border */
-  border: 1px solid #888; 
-}
 
-input{
+
+.submit {
 		
 	background: none;
 	border-radius: none;
@@ -87,3 +84,33 @@ input{
 	font-size: 1.4em;
 		
 	}
+button {
+	background: none;
+	border-radius: none;
+	border: 2px solid;
+	border-color: #FFF;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.90em 1.2em;
+	letter-spacing: 1px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.4em;
+		
+}
+.author {
+	margin-bottom: 2em;
+	margin-top: .5em;
+}
+
+.poem {
+	border: 2px solid #CCC;
+	font-family: 'Lato', sans-serif;
+	margin: 1em;
+	font-size: 100%;
+}
+
+
+

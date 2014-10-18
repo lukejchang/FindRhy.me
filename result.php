@@ -18,7 +18,7 @@ if(isset($_GET["lat"]) & isset($_GET["lon"])){
 
 					    POW(69.1 * ($LON - LON) * COS(LAT / 57.3), 2)) * 1609 AS distance
 
-					FROM main HAVING distance < 100 ORDER BY distance;";
+					FROM main HAVING distance < 10 ORDER BY distance;";
 
     $statement=$db->prepare($query);
     $statement->execute();
