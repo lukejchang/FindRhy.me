@@ -1,22 +1,41 @@
 /* Stylesheet made by Jenny Chen */ 
-
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 body {
 	background-color: white;
+	margin: 0px;
+	font-size: 100%;
 }
 
 .header {
+	background-image: url('img/background.jpg');
+	background-size: 100%;
 	padding: 4em 0em 2em 0em;
-	background-image: url('http://freewallsource.com/img/2014/3/dawn-wallpaper-16130-16833-hd-wallpapers.jpg');
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
 	position: relative;
-	width: ;
+	width: 100%;
+	text-align: center;
+
+
+
+}
+
+h1 {
+	color:#FFF;
+	font-weight: 100;
+	
 }
 
 .search {
 	padding: 4em 0em 2em 0em;
+	text-align: center;
+
 }
 
 .addPoem {
 	padding: 4em 0em 2em 0em;
+	background-color: #9f8186;
+	text-align: center;
 }
 
 .background {
