@@ -1,4 +1,4 @@
-var x = document.getElementById("op");
+var x = document.getElementById("submit");
 function getLocation() {
     x.innerHTML = "Loading your location";
     if (navigator.geolocation) {
@@ -8,5 +8,9 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-    window.location.replace("input.php?lat="+position.coords.latitude+"&lon="+position.coords.longitude);
+	$.post('url.php', {"lat":position.coords.latitude, "lon":position.coords.longitude}, function(data, status){
+            console.log(data);
+        });
+
+  //  window.location.replace("input.php?lat="+position.coords.latitude+"&lon="+position.coords.longitude);
 }
