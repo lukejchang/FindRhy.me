@@ -1,0 +1,2 @@
+The weather is currently
+o   k ay

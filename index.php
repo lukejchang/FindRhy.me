@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>FindRhy.me</title>
 		
-		<link rel="icon" href="" />
+		<link rel="icon" type="image/png" href="img/favicon-01.png" />
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -54,6 +54,7 @@
 			</div>
 			
 		</div>
+		<div class="checkMap"><p>Check out the map below to see locations of places where people have uploaded their poems!</p></div>
 		 <div id="map-canvas"></div>
 		<div class="addPoem">
 		
@@ -68,26 +69,28 @@
 			      </div>
 			      <div class="modal-body">
 			        <form name="addPoem" novalidate ng-submit="sendPoem(addPoem)">
-                        <div ng-show="success">Thanks! Poem submitted at coordinates ({{lat}}, {{long}}). Submit another poem or feel free to close this form.</div>
-						<textarea class="poem" ng-model="submission" rows="10" id="submission" name="submission" cols="50" placeholder="Enter your poems here to submit to this location! (2000 characters max)" ng-maxlength=2000 required></textarea><br>
-						<input class="author" ng-model="author" placeholder="Your name (50 characters max)" type="text" id="author" name="author" ng-maxlength=50 required/><br>
-						<input type="submit" name="btn" id="poemSubmit" ng-disabled="addPoem.$invalid">
+                        <div ng-show="success">Thanks! Poem submitted at coordinates ({{lat | number:2}}, {{long|number:2}}). Submit another poem or feel free to close this form.</div>
+						<textarea class="poem" ng-model="submission" rows="10" id="submission" name="submission" cols="50" placeholder="Enter your poem here to submit to this location! (2000 characters max)" ng-maxlength=2000 required></textarea><br>
+						<input class="author" id="author" ng-model="author" placeholder="Your name (50 characters max)" type="text" id="author" name="author" ng-maxlength=50 required/><br>
+						<button type="submit" name="btn" id="poemSubmit" ng-disabled="addPoem.$invalid">Send in your poem</button>
 		                <div style="color:red" ng-show="addPoem.submission.$dirty && addPoem.submission.$invalid" id="nopoem">
-		                    Please enter a poem less than 2000 characters to submit.
+		                    Please enter a poem (2000 characters max) to submit.
 		                </div>
 		                <div style="color:red" ng-show="addPoem.author.$dirty && addPoem.author.$invalid" id="noauthor">
-		                    Please enter an author name less than 50 characters. ("Anonymous" is fine.)
+		                    Please enter an author name less than 50 characters long. ("Anonymous" is okay)
 		                </div>
-
-					</form> 
+					</form>
 			      </div>
 			      <div class="modal-footer">
 			    <!--    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			        <button type="button" class="btn btn-primary">Save changes</button> -->
 			      </div>
+
 			    </div>
 			  </div>
 			</div>
+
+
 
 <!--
 			<form name="addPoem" novalidate ng-submit="sendPoem()">
@@ -104,5 +107,17 @@
 			</form> -->
 
 		</div>
+
+
+
+         <div class="footer">
+        	<p class="foot">FindRhy.me Created By</p>
+            <div class="row">
+            	<div class="col-md-3">WALTER CEDER <br><span class="role"> Developer</span></div>
+            	<div class="col-md-3">LUKE JIN LI CHANG<br><span class="role"> Developer</span></div>
+            	<div class="col-md-3">JENNY CHEN <br><span class="role"> UX Designer & Developer </span></div>
+            	<div class="col-md-3">HELEN UNG <br><span class="role">Project Manager & Developer</span></div>
+            </div>
+        </div>
 	</body>
 </html>

@@ -1,0 +1,10 @@
+Roses are red
+Violets are blue
+I hate php
+As much as I love you
+
+Flowers are plants
+Not ints
+Not even strings
+Wow what a long poem
+Yet still a small file size

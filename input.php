@@ -11,7 +11,14 @@
     	// does the file exist? will overwrite if so. maybe change in future
         $filename = "submissions/" . time('Y-m-d') . ".txt";
     	$file = file_put_contents($filename, $submission);
-    	$query = "INSERT INTO main Values(NULL, '$lat', '$lon', '$author', '$filename');";
+        //$timezone = file_get_contents('http://api.geonames.org/timezone?lat=' + $lat + '&lng=' + $lon + '&username=findrhyme' + $lat + ',' + $lon);
+        $time = date('U');
+        $weather = file_get_contents('https://api.forecast.io/forecast/b0693f7cf1215024240ba17bee0bf0a7/' . $lat . ',' . $lon . ',' . $time);
+        $weather = json_decode($weather);
+        $desc = $weather->currently->summary;
+        $temp = $weather->currently->temperature;
+    	$query = "INSERT INTO main Values(NULL, '$lat', '$lon', '$author', '$filename', '$time', '$desc', '$temp'  );";
+        print($query);
         $res = $db->query($query);
         if(!$res){
             print "fuk u";

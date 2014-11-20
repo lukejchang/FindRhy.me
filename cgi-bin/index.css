@@ -25,7 +25,11 @@ p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	position: relative;
+
 	text-align: center;
+
+
+
 }
 
 h1 {
@@ -41,23 +45,17 @@ h2 {
 	 font-size: 150%;
 	 letter-spacing: 10px;
 }
-h3 {
-	color:#FFF;
-	font-weight: 300;
-}
 
 .search {
-	padding: 1em 4em 2em 4em;
+	padding: 1em 4em 4em 4em;
 	text-align: center;
 	margin-bottom: 2em;
 
 }
 
-.checkMap {
-	margin-bottom: 1em;
-}
-
 .addPoem {
+	padding: 2em 0em 2em 0em;
+	background-image: url('img/tri2.svg');
 	text-align: center;
 }
 
@@ -65,9 +63,6 @@ h3 {
 	padding: 2em 0em 2em 0em;
 	background-image: url('img/tri2.svg');
 	text-align: center;
-	background-size: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 .background {
@@ -95,6 +90,7 @@ button[disabled=disabled], button:disabled {
 }
 
 .submit {
+		
 	background: none;
 	border-radius: none;
 	border: 2px solid;
@@ -109,8 +105,8 @@ button[disabled=disabled], button:disabled {
 	text-transform: uppercase;
 	font-size: 1.4em;
 	margin-top: 2em;
-}
-
+		
+	}
 button {
 	background: none;
 	border-radius: none;
@@ -126,12 +122,12 @@ button {
 	text-transform: uppercase;
 	font-size: 1.4em;
 	margin-top: 1em;
-}
 
+		
+}
 .center {
 	text-align: center;
 }
-
 .author {
 	margin-bottom: 2em;
 	margin-top: .5em;
@@ -158,28 +154,6 @@ margin: 0px;
 	color: #888;
 }
 
-.col-md-3{
-	color:#FFF;
-	font-weight: 300;
-	font-size: 150%;
-
-
-}
-.role{
-	color:#780a3f;
-	font-weight: 400;
-	font-size: 100%;
-}
-
-.foot {
-	font-size: 100%;
-	color:#FFF;
-	margin-bottom: 1em;
-}
-
-.row{
-	margin-right: 0;
-}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -195,19 +169,6 @@ and (max-device-width : 480px) {
 	.search {
 	margin-bottom: 1em;
 
-}
-	h1 {
-	color:#FFF;
-	font-weight: 300;
-	font-size: 300%;
-	
-}
-
-h2 {
-	color:#FFF;
-	font-weight: 300;
-	 font-size: 150%;
-	 letter-spacing: 10px;
 }
 
 }

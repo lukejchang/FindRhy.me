@@ -17,7 +17,7 @@ p {
 }
 
 .header {
-	background-image: url('img/background.jpg');
+	background-image: url('img/header02.jpg');
 	background-size: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -26,6 +26,10 @@ p {
 	font-weight: 100;
 	position: relative;
 	text-align: center;
+	margin-bottom: 1em;
+
+
+
 }
 
 h1 {
@@ -41,33 +45,32 @@ h2 {
 	 font-size: 150%;
 	 letter-spacing: 10px;
 }
+
 h3 {
 	color:#FFF;
 	font-weight: 300;
 }
 
 .search {
-	padding: 1em 4em 2em 4em;
+	padding: 4em 4em 4em 4em;
 	text-align: center;
-	margin-bottom: 2em;
 
-}
-
-.checkMap {
-	margin-bottom: 1em;
 }
 
 .addPoem {
+	padding: 2em 0em 2em 0em;
+	background-image: url('img/header-01.jpg');
 	text-align: center;
 }
 
 .footer {
 	padding: 2em 0em 2em 0em;
-	background-image: url('img/tri2.svg');
+	background-image: url('img/tri.svg');
 	text-align: center;
 	background-size: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
+
 }
 
 .background {
@@ -95,6 +98,7 @@ button[disabled=disabled], button:disabled {
 }
 
 .submit {
+		
 	background: none;
 	border-radius: none;
 	border: 2px solid;
@@ -108,15 +112,14 @@ button[disabled=disabled], button:disabled {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.4em;
-	margin-top: 2em;
-}
-
+		
+	}
 button {
 	background: none;
 	border-radius: none;
 	border: 2px solid;
-	border-color: #9f8186;
-	color: #9f8186;
+	border-color: #FFF;
+	color: #FFF;
 	cursor: pointer;
 	display: inline-block;
 	padding: 0.90em 1.2em;
@@ -125,13 +128,8 @@ button {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.4em;
-	margin-top: 1em;
+		
 }
-
-.center {
-	text-align: center;
-}
-
 .author {
 	margin-bottom: 2em;
 	margin-top: .5em;
@@ -146,23 +144,57 @@ button {
 
 #map-canvas {
   width: 100%;
-  height: 600px;
-}
- 
-textarea {
-margin: 0px;
-	width: 90%;
+  height: 300px;
 }
 
-#submitpoem {
+.name {
+	text-align: center;
+	font-size: 200%;
+	text-transform: uppercase;
+	font-weight: 100;
+	color:#9f8186;;
+}
+
+.poems {
+	text-align: center;
+	font-size: 130%;
+	font-weight: 300;
+	line-height: 130%;
 	color: #888;
+}
+
+.poemError{
+	text-align: center;
+	color: #9f8186;
+
+}
+
+ul {
+	list-style-type: none;
+    padding-left: 0;
+}
+
+pre {
+	
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	background-color: none; 
+	background-color: #dadae3;
+	border: none;
+	margin-bottom: 1em;
+}
+
+p {
+text-align: center;
+	font-size: 100%;
+	font-weight: 100;
+	color:#9f8186;;
 }
 
 .col-md-3{
 	color:#FFF;
 	font-weight: 300;
 	font-size: 150%;
-
 
 }
 .role{
@@ -177,25 +209,29 @@ margin: 0px;
 	margin-bottom: 1em;
 }
 
+#income, #commute{
+	font-size: 150%;
+}
+
+#zilla {
+	font-size: 200%;
+	color:#888;
+	font-weight: 300;
+}
+
+.mood{
+	text-align: center;
+	color:#888;
+	font-weight: 300;
+}
+
 .row{
 	margin-right: 0;
 }
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-	
-	button {
-	float: center;
-	margin-top: 1em;
-	border-radius: none;
-	}
-	.twobut {
-		text-align: center;
-	}
-	.search {
-	margin-bottom: 1em;
-
-}
 	h1 {
 	color:#FFF;
 	font-weight: 300;
@@ -209,5 +245,24 @@ h2 {
 	 font-size: 150%;
 	 letter-spacing: 10px;
 }
+pre {
+	
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	background-color: none; 
+	background-color: #dadae3;
+	border: none;
+	margin-bottom: 1em;
+}
+.name {
+	text-align: center;
+	font-size: 200%;
+	text-transform: uppercase;
+	font-weight: 300;
+	color:#9f8186;;
+}
 
+#income, #commute {
+	font-weight: 300;
+}
 }
